@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TopBar from '../components/sections/TopBar';
+import Navbar from '../components/layout/Navbar';
+import Hero from '../components/sections/Hero';
+import TrustStrip from '../components/sections/TrustStrip';
+import Services from '../components/sections/Services';
+import BrandsStrip from '../components/sections/BrandsStrip';
+import WhyUs from '../components/sections/WhyUs';
+import StatsSection from '../components/sections/StatsSection';
+import Pricing from '../components/sections/Pricing';
+import Process from '../components/sections/Process';
+import Testimonials from '../components/sections/Testimonials';
+import BookingContact from '../components/sections/BookingContact';
+import Footer from '../components/layout/Footer';
+import MobileCtaBar from '../components/MobileCtaBar';
+import { Toaster } from 'sonner';
+import '../styles/global.css';
+---
+
+<BaseLayout>
+  <TopBar client:load />
+  <Navbar client:load />
+  <Hero client:load />
+  <TrustStrip client:load />
+  <Services client:load />
+  <BrandsStrip client:load />
+  <WhyUs client:load />
+  <StatsSection client:load />
+  <Pricing client:load />
+  <Process client:load />
+  <Testimonials client:load />
+  <BookingContact client:load />
+  <Footer client:load />
+  <MobileCtaBar client:load />
+  <Toaster client:load position="top-center" richColors />
+</BaseLayout>

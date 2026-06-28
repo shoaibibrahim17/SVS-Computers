@@ -1,0 +1,32 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'SVS Computers | Computer Repair in Secunderabad | Laptop, PC, Data Recovery',
+  description = 'Expert computer and laptop repair in Secunderabad. Screen replacement, data recovery, virus removal. Same-day service. 90-day warranty. Call now.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0D2461" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="pb-16 md:pb-0">
+    <slot />
+  </body>
+</html>
